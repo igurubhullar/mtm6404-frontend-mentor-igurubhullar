@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./output.css" />
+
+    <title>Frontend Mentor | Blogr</title>
+  </head>
+  <body class="font-overpass">
+    <!-- Header Section with Navigation -->
+    <header class="relative bg-gradient-cta rounded-bl-[100px]">
+      <div
+        class="absolute inset-0 bg-no-repeat bg-cover opacity-70"
+        style="
+          background-image: url('./images/bg-pattern-intro-desktop.svg');
+          background-position: center left 25%;
+        "
+      ></div>
+
+      <div class="relative container mx-auto px-6 py-12 md:py-16">
+        <!-- Navigation Bar -->
+        <nav class="flex items-center justify-between">
+          <div class="flex items-center gap-16">
+            <!-- Logo -->
+            <a href="#" class="block">
+              <img src="./images/logo.svg" alt="Blogr Logo" class="h-10" />
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex items-center gap-8">
+              <!-- Product Dropdown -->
+              <div class="group relative">
+                <button
+                  class="nav-link text-white flex items-center gap-2 pb-2"
+                >
+                  Product
+                  <img
+                    src="./images/icon-arrow-light.svg"
+                    alt="Arrow"
+                    class="group-hover:rotate-180 transition-transform"
+                  />
+                </button>
+                <div
+                  class="dropdown-menu invisible group-hover:visible opacity-0 group-hover:opacity-100 mt-0 left-0 absolute transition-all duration-300 ease-in-out"
+                >
+                  <a href="#" class="dropdown-link">Overview</a>
+                  <a href="#" class="dropdown-link">Pricing</a>
+                  <a href="#" class="dropdown-link">Marketplace</a>
+                  <a href="#" class="dropdown-link">Features</a>
+                  <a href="#" class="dropdown-link">Integrations</a>
+                </div>
+              </div>
+
+              <!-- Company Dropdown -->
+              <div class="group relative">
+                <button
+                  class="nav-link text-white flex items-center gap-2 pb-2"
+                >
+                  Company
+                  <img
+                    src="./images/icon-arrow-light.svg"
+                    alt="Arrow"
+                    class="group-hover:rotate-180 transition-transform"
+                  />
+                </button>
+                <div
+                  class="dropdown-menu invisible group-hover:visible opacity-0 group-hover:opacity-100 mt-0 left-0 absolute transition-all duration-300 ease-in-out"
+                >
+                  <a href="#" class="dropdown-link">About</a>
+                  <a href="#" class="dropdown-link">Team</a>
+                  <a href="#" class="dropdown-link">Blog</a>
+                  <a href="#" class="dropdown-link">Careers</a>
+                </div>
+              </div>
+
+              <!-- Connect Dropdown -->
+              <div class="group relative">
+                <button
+                  class="nav-link text-white flex items-center gap-2 pb-2"
+                >
+                  Connect
+                  <img
+                    src="./images/icon-arrow-light.svg"
+                    alt="Arrow"
+                    class="group-hover:rotate-180 transition-transform"
+                  />
+                </button>
+                <div
+                  class="dropdown-menu invisible group-hover:visible opacity-0 group-hover:opacity-100 mt-0 left-0 absolute transition-all duration-300 ease-in-out"
+                >
+                  <a href="#" class="dropdown-link">Contact</a>
+                  <a href="#" class="dropdown-link">Newsletter</a>
+                  <a href="#" class="dropdown-link">LinkedIn</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="md:hidden" id="mobile-menu-button">
+            <img src="./images/icon-hamburger.svg" alt="Menu" class="h-6" />
+          </button>
+
+          <!-- Login/Signup Buttons -->
+          <div class="hidden md:flex items-center gap-8">
+            <a
+              href="#"
+              class="text-white font-ubuntu hover:text-white/80 transition-colors"
+              >Login</a
+            >
+            <a href="#" class="btn btn-primary">Sign Up</a>
+          </div>
+        </nav>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div
+          class="hidden bg-white rounded-lg shadow-xl p-8 mt-6 absolute left-6 right-6 z-[100] max-h-[85vh] overflow-y-auto"
+          id="mobile-menu"
+        >
+          <!-- Close button -->
+          <div class="flex justify-end mb-4">
+            <button id="mobile-menu-close">
+              <img src="./images/icon-close.svg" alt="Close" class="h-5 w-5" />
+            </button>
+          </div>
+
+          <!-- Mobile navigation items -->
+          <div class="flex flex-col space-y-6">
+            <!-- Product Dropdown -->
+            <div class="relative">
+              <button
+                class="w-full flex items-center justify-between py-2 text-very-dark-blue font-semibold text-xl"
+              >
+                Product
+                <img
+                  src="./images/icon-arrow-light.svg"
+                  alt="Arrow"
+                  class="transition-transform"
+                />
+              </button>
+              <div class="hidden bg-gray-50 rounded-lg p-6 mt-4 w-full">
+                <div class="flex flex-col space-y-5">
+                  <a
+                    href="#"
+                    class="text-very-dark-grayish-blue hover:font-bold text-center py-1 text-lg"
+                    >Overview</a
+                  >
+                  <a
+                    href="#"
+                    class="text-very-dark-grayish-blue hover:font-bold text-center py-1 text-lg"
+                    >Pricing</a
+                  >
+                  <a
+                    href="#"
+                    class="text-very-dark-grayish-blue hover:font-bold text-center py-1 text-lg"
+                    >Marketplace</a
+                  >
+                  <a
+                    href="#"
+                    class="text-very-dark-grayish-blue hover:font-bold text-center py-1 text-lg"
+                    >Features</a
+                  >
+                  <a
+                    href="#"
+                    class="text-very-dark-grayish-blue hover:font-bold text-center py-1 text-lg"
+                    >Integrations</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Company Dropdown -->
+            <div class="relative">
+              <button
+                class="w-full flex items-center justify-between py-2 text-very-dark-blue font-semibold text-xl"
+              >
+                Company
+                <img
+                  src="./images/icon-arrow-light.svg"
+                  alt="Arrow"
+                  class="transition-transform"
+                />
+              </button>
+              <div class="hidden bg-gray-50 rounded-lg p-6 mt-4 w-full">
+                <div class="flex flex-col space-y-5">
+                  <a
+                    href="#"
+                    class="text-very-dark-grayish-blue hover:font-bold text-center py-1 text-lg"
+                    >About</a
+                  >
+                  <a
+                    href="#"
+                    class="text-very-dark-grayish-blue hover:font-bold text-center py-1 text-lg"
+                    >Team</a
+                  >
+                  <a
+                    href="#"
+                    class="text-very-dark-grayish-blue hover:font-bold text-center py-1 text-lg"
+                    >Blog</a
+                  >
+                  <a
+                    href="#"
+                    class="text-very-dark-grayish-blue hover:font-bold text-center py-1 text-lg"
+                    >Careers</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Connect Dropdown -->
+            <div class="relative">
+              <button
+                class="w-full flex items-center justify-between py-2 text-very-dark-blue font-semibold text-xl"
+              >
+                Connect
+                <img
+                  src="./images/icon-arrow-light.svg"
+                  alt="Arrow"
+                  class="transition-transform"
+                />
+              </button>
+              <div class="hidden bg-gray-50 rounded-lg p-6 mt-4 w-full">
+                <div class="flex flex-col space-y-5">
+                  <a
+                    href="#"
+                    class="text-very-dark-grayish-blue hover:font-bold text-center py-1 text-lg"
+                    >Contact</a
+                  >
+                  <a
+                    href="#"
+                    class="text-very-dark-grayish-blue hover:font-bold text-center py-1 text-lg"
+                    >Newsletter</a
+                  >
+                  <a
+                    href="#"
+                    class="text-very-dark-grayish-blue hover:font-bold text-center py-1 text-lg"
+                    >LinkedIn</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <hr class="my-4 border-gray-200" />
+
+            <!-- Mobile Login/Signup -->
+            <div class="flex flex-col items-center space-y-6 pt-4">
+              <a
+                href="#"
+                class="text-very-dark-blue font-ubuntu font-medium text-xl"
+                >Login</a
+              >
+              <a
+                href="#"
+                class="bg-gradient-to-r from-[#ff8f70] to-[#ff3d54] text-white py-3 px-8 rounded-full w-full text-center font-bold"
+                >Sign Up</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="text-center mt-24 mb-32">
+          <h1 class="text-4xl md:text-6xl font-semibold text-white mb-4">
+            A modern publishing platform
+          </h1>
+          <p class="text-white/80 text-lg mb-12">
+            Grow your audience and build your online brand
+          </p>
+          <div
+            class="flex flex-col sm:flex-row items-center justify-center gap-4"
+          >
+            <a href="#" class="btn btn-primary w-40 whitespace-nowrap"
+              >Start for Free</a
+            >
+            <a href="#" class="btn btn-outline w-40 whitespace-nowrap"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Designed for the future section -->
+      <section class="container mx-auto px-6 py-24 md:py-32 relative">
+        <h2
+          class="text-3xl md:text-4xl text-center font-bold text-very-dark-blue mb-16"
+        >
+          Designed for the future
+        </h2>
+
+        <div class="relative flex flex-col md:flex-row">
+          <!-- Left content -->
+          <div
+            class="w-full md:w-1/2 space-y-12 order-2 md:order-1 mt-16 md:mt-0 z-10"
+          >
+            <div>
+              <h3 class="text-2xl mb-5 text-very-dark-blue font-bold">
+                Introducing an extensible editor
+              </h3>
+              <p class="leading-relaxed text-very-dark-grayish-blue">
+                Blogr features an exceedingly intuitive interface which lets you
+                focus on one thing: creating content. The editor supports
+                management of multiple blogs and allows easy manipulation of
+                embeds such as images, videos, and Markdown. Extensibility with
+                plugins and themes provide easy ways to add functionality or
+                change the looks of a blog.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-2xl mb-5 text-very-dark-blue font-bold">
+                Robust content management
+              </h3>
+              <p class="leading-relaxed text-very-dark-grayish-blue">
+                Flexible content management enables users to easily move through
+                posts. Increase the usability of your blog by adding customized
+                categories, sections, format, or flow. With this functionality,
+                you're in full control.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="w-full md:w-1/2 order-1 md:order-2 md:absolute md:right-[-20%] xl:right-[-15%] md:top-1/2 md:transform md:-translate-y-1/2"
+          >
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/illustration-editor-desktop.svg"
+              />
+              <img
+                src="./images/illustration-editor-mobile.svg"
+                alt="Editor illustration"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="bg-gradient-body rounded-tr-[100px] rounded-bl-[100px] text-white py-16 md:py-24 relative mt-40 md:mt-40 mb-24"
+      >
+        <div class="absolute inset-0 overflow-hidden">
+          <img
+            src="./images/bg-pattern-circles.svg"
+            alt="Circles pattern"
+            class="absolute top-[-100px] transform scale-110"
+          />
+        </div>
+
+        <div class="container mx-auto px-6 relative">
+          <div class="flex flex-col md:flex-row items-center">
+            <div
+              class="md:w-1/2 -mt-52 md:-mt-72 mb-12 md:mb-0 relative z-10 px-4"
+            >
+              <img
+                src="./images/illustration-phones.svg"
+                alt="Phones"
+                class="w-full max-w-md mx-auto md:ml-0"
+              />
+            </div>
+
+            <div class="md:w-1/2 md:pl-8">
+              <h2 class="text-3xl text-white md:text-4xl font-bold mb-6">
+                State of the Art Infrastructure
+              </h2>
+              <p class="leading-relaxed text-white/90 md:pr-12">
+                With reliability and speed in mind, worldwide data centers
+                provide the backbone for ultra-fast connectivity. This ensures
+                your site will load instantly, no matter where your readers are,
+                keeping your site competitive.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="container mx-auto md:mx-0 px-6 py-24 md:py-60 relative overflow-hidden xl:ml-64"
+      >
+        <div class="relative flex flex-col md:flex-row items-center">
+          <div
+            class="w-full md:w-1/2 order-2 md:order-1 mb-16 md:mb-0 md:absolute md:left-[-20%] xl:left-[0%] md:top-1/2 md:transform md:-translate-y-1/2"
+          >
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/illustration-laptop-desktop.svg"
+              />
+              <img
+                src="./images/illustration-laptop-mobile.svg"
+                alt="Laptop illustration"
+                class="w-[130%] mx-auto md:max-w-full md:object-contain overflow-hidden"
+              />
+            </picture>
+          </div>
+
+          <div class="w-full md:w-1/2 md:ml-auto space-y-12 order-1 md:order-2">
+            <div>
+              <h3 class="text-2xl mb-5 text-very-dark-blue font-bold">
+                Free, open, simple
+              </h3>
+              <p class="leading-relaxed text-very-dark-grayish-blue">
+                Blogr is a free and open source application backed by a large
+                community of helpful developers. It supports features such as
+                code syntax highlighting, RSS feeds, social media integration,
+                third-party commenting tools, and works seamlessly with Google
+                Analytics. The architecture is clean and is relatively easy to
+                learn.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-2xl mb-5 text-very-dark-blue font-bold">
+                Powerful tooling
+              </h3>
+              <p class="leading-relaxed text-very-dark-grayish-blue">
+                Batteries included. We built a simple and straightforward CLI
+                tool that makes customization and deployment a breeze, but
+                capable of producing even the most complicated sites.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-very-dark-black-blue text-white rounded-tr-[100px] py-16">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+          <div>
+            <img src="./images/logo.svg" alt="Blogr Logo" class="h-10 mb-8" />
+          </div>
+
+          <div>
+            <h4 class="font-ubuntu font-medium mb-6 text-white">Product</h4>
+            <ul class="space-y-3 text-grayish-blue">
+              <li><a href="#" class="hover:underline">Overview</a></li>
+              <li><a href="#" class="hover:underline">Pricing</a></li>
+              <li><a href="#" class="hover:underline">Marketplace</a></li>
+              <li><a href="#" class="hover:underline">Features</a></li>
+              <li><a href="#" class="hover:underline">Integrations</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-ubuntu font-medium mb-6 text-white">Company</h4>
+            <ul class="space-y-3 text-grayish-blue">
+              <li><a href="#" class="hover:underline">About</a></li>
+              <li><a href="#" class="hover:underline">Team</a></li>
+              <li><a href="#" class="hover:underline">Blog</a></li>
+              <li><a href="#" class="hover:underline">Careers</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-ubuntu font-medium mb-6 text-white">Connect</h4>
+            <ul class="space-y-3 text-grayish-blue">
+              <li><a href="#" class="hover:underline">Contact</a></li>
+              <li><a href="#" class="hover:underline">Newsletter</a></li>
+              <li><a href="#" class="hover:underline">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
