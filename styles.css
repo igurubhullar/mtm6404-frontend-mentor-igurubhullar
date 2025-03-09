@@ -4,3 +4,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-overpass text-base text-very-dark-grayish-blue;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-overpass font-semibold text-very-dark-blue;
+  }
+  .nav-link {
+    @apply relative cursor-pointer font-ubuntu hover:text-black transition-colors;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-8 py-3 rounded-full font-ubuntu font-bold transition-all duration-300 whitespace-nowrap text-center;
+  }
+  .btn-primary {
+    @apply bg-white text-light-red hover:bg-very-light-red hover:text-white;
+  }
+  .btn-outline {
+    @apply bg-transparent border border-white text-white hover:bg-white hover:text-light-red;
+  }
+  .dropdown-menu {
+    @apply absolute bg-white rounded-lg shadow-lg p-6 min-w-[200px] z-10;
+  }
+  .dropdown-link {
+    @apply block py-2 text-very-dark-grayish-blue hover:font-bold;
+  }
+}

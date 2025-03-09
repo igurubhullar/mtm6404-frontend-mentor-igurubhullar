@@ -4,8 +4,8 @@
   "description": "Blogr landing page using Tailwind CSS",
   "main": "index.html",
   "scripts": {
-    "dev": "tailwindcss -i ./input.css -o ./output.css --watch",
-    "build": "tailwindcss -i ./input.css -o ./output.css"
+    "dev": "tailwindcss -i ./styles.css -o ./output.css --watch",
+    "build": "tailwindcss -i ./styles.css -o ./output.css"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
